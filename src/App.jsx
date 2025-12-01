@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 import HomePage from './pages/HomePage.jsx'
 import Contract from './pages/Contract.jsx'
 import Introduction from './pages/Introduction.jsx'
+import Students from './pages/Students.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 
@@ -24,6 +25,7 @@ function App() {
         <Route path='/' element={<HomePage />} />
         <Route path='/introduction' element={<Introduction />} />
         <Route path='/contract' element={<Contract />} />
+        <Route path='/students' element={<Students />} />
 
       </Routes>
       <Footer />
