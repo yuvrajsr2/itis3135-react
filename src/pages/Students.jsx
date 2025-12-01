@@ -19,7 +19,7 @@ export default function Students() {
 
   return (
     <div style={{ padding: "20px" }}>
-      <h1>All Student Introductions</h1>
+      <h2>All Student Introductions</h2>
 
       {students.map((student, index) => {
         const fullName = `${student.name.preferred || student.name.first} ${student.name.last}`;
