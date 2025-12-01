@@ -2,24 +2,20 @@ import { useEffect, useState } from "react";
 
 export default function Students() {
   const [students, setStudents] = useState([]);
-  const [loading, setLoading] = useState(true);
+
 
   useEffect(() => {
     fetch("https://dvonb.xyz/api/2025-fall/itis-3135/students?full=1")
       .then((res) => res.json())
       .then((data) => {
         setStudents(data);
-        setLoading(false);
+  
       })
       .catch((err) => {
         console.error("Error fetching student data:", err);
-        setLoading(false);
+   
       });
   }, []);
-
-  if (loading) {
-    return <h2 style={{ textAlign: "center" }}>Loading students...</h2>;
-  }
 
   return (
     <div style={{ padding: "20px" }}>
